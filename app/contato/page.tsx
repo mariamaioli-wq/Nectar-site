@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { AuroraBackground } from "@/components/brand/AuroraBackground";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -19,16 +20,22 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function ContatoPage() {
-  const { register, handleSubmit, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm<FormData>({
+  const [enviado, setEnviado] = useState(false);
+  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
 
   const onSubmit = async (data: FormData) => {
-    await fetch("/api/contato", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    try {
+      const res = await fetch("/api/contato", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) setEnviado(true);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   return (
@@ -87,7 +94,7 @@ export default function ContatoPage() {
               className="rounded-[16px] p-8"
               style={{ background: "#0F0A1C", border: "0.5px solid rgba(255,255,255,0.08)" }}
             >
-              {isSubmitSuccessful ? (
+              {enviado ? (
                 <div className="flex flex-col items-center justify-center h-full py-12 text-center">
                   <div className="h-12 w-12 rounded-full mb-4 flex items-center justify-center"
                     style={{ background: "linear-gradient(135deg, #7C3AED, #E11D74)" }}>

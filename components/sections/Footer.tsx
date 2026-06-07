@@ -17,7 +17,7 @@ export function Footer() {
               </a>
               <a href="tel:+551199999999" className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors">
                 <Phone size={14} />
-                +55 11 9999-9999
+                +55 11 96618-6666
               </a>
               <span className="flex items-center gap-2.5 text-sm text-white/40">
                 <MapPin size={14} />

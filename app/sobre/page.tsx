@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { AuroraBackground } from "@/components/brand/AuroraBackground";
 import { Container } from "@/components/ui/Container";
 import { CTAFinal } from "@/components/sections/CTAFinal";
@@ -44,24 +45,28 @@ export default function SobrePage() {
             <div
               className="relative rounded-[14px] overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, #1a0f2e 0%, #0F0A1C 100%)",
                 border: "0.5px solid rgba(255,255,255,0.08)",
                 minHeight: "400px",
               }}
             >
+              <Image
+                src="/bruno.jpg"
+                alt="Bruno Maioli — Founder da Nectar"
+                fill
+                className="object-cover"
+                style={{ filter: "grayscale(30%)" }}
+              />
               <div
-                className="absolute inset-0 opacity-40"
-                style={{
-                  background: "radial-gradient(ellipse 80% 60% at 40% 70%, rgba(124,58,237,0.6), transparent 70%)",
-                }}
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(to top, rgba(7,5,14,0.75) 0%, transparent 50%)" }}
               />
               <div className="absolute inset-0 flex items-end p-8">
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-white/30 mb-1">Founder & CEO</p>
-                  <p className="text-2xl font-medium text-white/80" style={{ fontFamily: "var(--font-clash)" }}>
+                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-white/40 mb-1">Founder & CEO</p>
+                  <p className="text-2xl font-medium text-white" style={{ fontFamily: "var(--font-clash)" }}>
                     Bruno Maioli
                   </p>
-                  <p className="text-sm text-white/40 mt-1">+25 anos em eventos corporativos</p>
+                  <p className="text-sm text-white/50 mt-1">+25 anos em eventos corporativos</p>
                 </div>
               </div>
             </div>

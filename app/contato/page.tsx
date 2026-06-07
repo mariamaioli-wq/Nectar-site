@@ -62,7 +62,7 @@ export default function ContatoPage() {
                     <p className="text-sm">Maioli@nectareventos.com.br</p>
                   </div>
                 </a>
-                <a href="tel:+5511999999999" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                <a href="tel:+5511966186666" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
                   <div className="h-10 w-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(124,58,237,0.1)" }}>
                     <Phone size={18} className="text-[#7C3AED]" />
                   </div>

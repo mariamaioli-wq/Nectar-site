@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
 export function Founder() {
@@ -17,22 +18,26 @@ export function Founder() {
             className="relative"
           >
             <div
-              className="aspect-[4/5] rounded-[14px] overflow-hidden"
-              style={{
-                background: "linear-gradient(135deg, #1a0f2e 0%, #0F0A1C 100%)",
-                border: "0.5px solid rgba(255,255,255,0.08)",
-              }}
+              className="relative aspect-[4/5] rounded-[14px] overflow-hidden"
+              style={{ border: "0.5px solid rgba(255,255,255,0.08)" }}
             >
+              <Image
+                src="/bruno.jpg"
+                alt="Bruno Maioli — Founder da Nectar"
+                fill
+                className="object-cover"
+                style={{ filter: "grayscale(30%)" }}
+              />
               <div
-                className="absolute inset-0 opacity-30"
+                className="absolute inset-0"
                 style={{
-                  background: "radial-gradient(ellipse 80% 60% at 40% 70%, rgba(124,58,237,0.6), transparent 70%)",
+                  background: "linear-gradient(to top, rgba(7,5,14,0.7) 0%, transparent 50%)",
                 }}
               />
               <div className="absolute inset-0 flex items-end p-6">
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-white/30 mb-1">Founder</p>
-                  <p className="text-xl font-medium text-white/80" style={{ fontFamily: "var(--font-clash)" }}>
+                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-white/50 mb-1">Founder</p>
+                  <p className="text-xl font-medium text-white" style={{ fontFamily: "var(--font-clash)" }}>
                     Bruno Maioli
                   </p>
                 </div>

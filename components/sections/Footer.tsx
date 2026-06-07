@@ -13,7 +13,7 @@ export function Footer() {
             <div className="flex flex-col gap-3">
               <a href="mailto:contato@nectar.com.br" className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors">
                 <Mail size={14} />
-                contato@nectar.com.br
+                Maioli@nectareventos.com.br
               </a>
               <a href="tel:+551199999999" className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white transition-colors">
                 <Phone size={14} />

@@ -50,13 +50,13 @@ export default function ContatoPage() {
           <div className="grid md:grid-cols-2 gap-16">
             <div>
               <div className="flex flex-col gap-5">
-                <a href="mailto:contato@nectar.com.br" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                <a href="mailto:Maioli@nectareventos.com.br" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
                   <div className="h-10 w-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(225,29,116,0.1)" }}>
                     <Mail size={18} className="text-[#E11D74]" />
                   </div>
                   <div>
                     <p className="text-xs text-white/30 uppercase tracking-[0.1em] mb-0.5">E-mail</p>
-                    <p className="text-sm">contato@nectar.com.br</p>
+                    <p className="text-sm">Maioli@nectareventos.com.br</p>
                   </div>
                 </a>
                 <a href="tel:+5511999999999" className="flex items-center gap-3 text-white/60 hover:text-white transition-colors">

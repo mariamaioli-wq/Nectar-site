@@ -5,7 +5,10 @@
       "Bash(curl -fsSL https://nodejs.org/dist/v22.13.1/node-v22.13.1-darwin-arm64.tar.gz -o /tmp/node.tar.gz)",
       "Bash(mkdir -p ~/local)",
       "Bash(tar -xzf /tmp/node.tar.gz -C ~/local)",
-      "Read(//Users/malu/**)"
+      "Read(//Users/malu/**)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }

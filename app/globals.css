@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --magenta: #E11D74;
+  --violeta: #7C3AED;
+  --ambar: #F97316;
+  --midnight: #07050E;
+  --deep-purple: #0F0A1C;
+  --off-white: #FAFAF7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #07050E;
+  color: #FAFAF7;
+  font-family: var(--font-inter), Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(225, 29, 116, 0.3);
+  color: #fff;
+}
